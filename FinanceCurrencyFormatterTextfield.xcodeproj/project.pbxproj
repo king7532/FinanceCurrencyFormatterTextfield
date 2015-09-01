@@ -13,6 +13,7 @@
 		3C8204AC1B962C95002A5F7F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C8204AB1B962C95002A5F7F /* Images.xcassets */; };
 		3C8204AF1B962C95002A5F7F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C8204AD1B962C95002A5F7F /* LaunchScreen.xib */; };
 		3C8204BB1B962C95002A5F7F /* FinanceCurrencyFormatterTextfieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8204BA1B962C95002A5F7F /* FinanceCurrencyFormatterTextfieldTests.swift */; };
+		3C8204C51B962CBC002A5F7F /* FinanceCurrencyFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8204C41B962CBC002A5F7F /* FinanceCurrencyFormatter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,8 @@
 		3C8204B41B962C95002A5F7F /* FinanceCurrencyFormatterTextfieldTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FinanceCurrencyFormatterTextfieldTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C8204B91B962C95002A5F7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C8204BA1B962C95002A5F7F /* FinanceCurrencyFormatterTextfieldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceCurrencyFormatterTextfieldTests.swift; sourceTree = "<group>"; };
+		3C8204C41B962CBC002A5F7F /* FinanceCurrencyFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinanceCurrencyFormatter.swift; sourceTree = "<group>"; };
+		3C8204C61B965BA3002A5F7F /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +62,7 @@
 		3C8204961B962C95002A5F7F = {
 			isa = PBXGroup;
 			children = (
+				3C8204C61B965BA3002A5F7F /* MyPlayground.playground */,
 				3C8204A11B962C95002A5F7F /* FinanceCurrencyFormatterTextfield */,
 				3C8204B71B962C95002A5F7F /* FinanceCurrencyFormatterTextfieldTests */,
 				3C8204A01B962C95002A5F7F /* Products */,
@@ -77,6 +81,7 @@
 		3C8204A11B962C95002A5F7F /* FinanceCurrencyFormatterTextfield */ = {
 			isa = PBXGroup;
 			children = (
+				3C8204C41B962CBC002A5F7F /* FinanceCurrencyFormatter.swift */,
 				3C8204A41B962C95002A5F7F /* AppDelegate.swift */,
 				3C8204A61B962C95002A5F7F /* ViewController.swift */,
 				3C8204A81B962C95002A5F7F /* Main.storyboard */,
@@ -212,6 +217,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C8204C51B962CBC002A5F7F /* FinanceCurrencyFormatter.swift in Sources */,
 				3C8204A71B962C95002A5F7F /* ViewController.swift in Sources */,
 				3C8204A51B962C95002A5F7F /* AppDelegate.swift in Sources */,
 			);
