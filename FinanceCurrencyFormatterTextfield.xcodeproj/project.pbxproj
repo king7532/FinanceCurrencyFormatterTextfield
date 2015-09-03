@@ -27,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3C597BBC1B988B3200767ED4 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		3C82049F1B962C95002A5F7F /* FinanceCurrencyFormatterTextfield.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinanceCurrencyFormatterTextfield.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C8204A31B962C95002A5F7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C8204A41B962C95002A5F7F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +63,7 @@
 		3C8204961B962C95002A5F7F = {
 			isa = PBXGroup;
 			children = (
+				3C597BBC1B988B3200767ED4 /* README.md */,
 				3C8204C61B965BA3002A5F7F /* MyPlayground.playground */,
 				3C8204A11B962C95002A5F7F /* FinanceCurrencyFormatterTextfield */,
 				3C8204B71B962C95002A5F7F /* FinanceCurrencyFormatterTextfieldTests */,
@@ -417,6 +419,7 @@
 				3C8204C01B962C95002A5F7F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3C8204C11B962C95002A5F7F /* Build configuration list for PBXNativeTarget "FinanceCurrencyFormatterTextfieldTests" */ = {
 			isa = XCConfigurationList;
@@ -425,6 +428,7 @@
 				3C8204C31B962C95002A5F7F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

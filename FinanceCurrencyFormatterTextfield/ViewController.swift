@@ -101,7 +101,7 @@ extension ViewController: UITextFieldDelegate {
 
         textField.text = formatter.stringFromNumber(decimal)
         
-        // Restore the cursor position if it was moved, or go back to the end of hte currency
+        // Restore the cursor position if it was moved, or go back to the end of the currency
         if cursorOffset != formatter.cursorOffsetFromEndOfString {
             var newCursor :UITextPosition?
             if formatter.cursorOffsetFromEndOfString < 0 && cursorOffset > formatter.cursorOffsetFromEndOfString {
