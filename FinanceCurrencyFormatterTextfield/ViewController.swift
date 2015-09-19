@@ -28,25 +28,25 @@ class ViewController: UIViewController {
 
 extension ViewController: UITextFieldDelegate {
     func textFieldDidBeginEditing(textField: UITextField) {
-        println("textFieldDidBeginEditing")
+        print("textFieldDidBeginEditing")
         self.userEntered = nil
         self.userTextLabel.text = ""
         textField.text = self.formatter.stringFromNumber(NSDecimalNumber.zero())
         
-        let initialCursorPostion = textField.positionFromPosition(textField.endOfDocument, offset: formatter.cursorOffsetFromEndOfString)
+        let initialCursorPostion = textField.positionFromPosition(textField.endOfDocument, offset: formatter.cursorOffsetFromEndOfString)!
         textField.selectedTextRange = textField.textRangeFromPosition(initialCursorPostion, toPosition: initialCursorPostion)
     }
     
     func textFieldDidEndEditing(textField: UITextField) {
-        print("textFieldDidEndEditing: \(textField.text)")
+        print("textFieldDidEndEditing: \(textField.text)", terminator: "")
         self.userTextLabel.text = textField.text
     }
     
     func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
-        println("shouldChangeCharactersInRange: \(range) replacementString: \(string) (len: \(count(string)))")
+        print("shouldChangeCharactersInRange: \(range) replacementString: \(string) (len: \(string.characters.count))")
         
         if !formatter.isPartialStringValid(string, newEditingString: nil, errorDescription: nil) {
-            println("partial string is invalid!")
+            print("partial string is invalid!")
             return false
         }
         
@@ -56,14 +56,14 @@ extension ViewController: UITextFieldDelegate {
         let selectedRange :UITextRange? = textField.selectedTextRange
         let cursorOffset = textField.offsetFromPosition(textField.endOfDocument, toPosition: selectedRange!.start)
         
-        println("\tselectedRange: \(selectedRange!)\n\tcursorOffset: \(cursorOffset)")
+        print("\tselectedRange: \(selectedRange!)\n\tcursorOffset: \(cursorOffset)")
         
         if !string.isEmpty {
             // If the user moved the text insertion cursor
             if cursorOffset != formatter.cursorOffsetFromEndOfString {
-                let fullText = (textField.text as NSString).stringByReplacingCharactersInRange(range, withString: string)
+                let fullText = (textField.text! as NSString).stringByReplacingCharactersInRange(range, withString: string)
                 userEntered = formatter.stringDecimalDigits(fullText)
-                println(self.userEntered)
+                print(self.userEntered)
             }
             else if let userStr = self.userEntered {
                 self.userEntered = userStr + string
@@ -76,11 +76,11 @@ extension ViewController: UITextFieldDelegate {
             // Backspace
             if let userStr = self.userEntered where !userStr.isEmpty {
                 if cursorOffset != formatter.cursorOffsetFromEndOfString {
-                    let fullText = (textField.text as NSString).stringByReplacingCharactersInRange(range, withString: string)
+                    let fullText = (textField.text! as NSString).stringByReplacingCharactersInRange(range, withString: string)
                     userEntered = formatter.stringDecimalDigits(fullText)
                 }
                 else {
-                    userEntered = dropLast(userStr)
+                    userEntered = String(userStr.characters.dropLast())
                 }
             }
         }
@@ -88,7 +88,7 @@ extension ViewController: UITextFieldDelegate {
         self.userTextLabel.text = userEntered
         
         var decimal = NSDecimalNumber.zero()
-        if let userStr = self.userEntered {
+        if let _ = self.userEntered {
             decimal = NSDecimalNumber(string: userEntered)
             
             if decimal != NSDecimalNumber.notANumber() {
@@ -114,7 +114,7 @@ extension ViewController: UITextFieldDelegate {
             textField.selectedTextRange = textField.textRangeFromPosition(newCursor!, toPosition: newCursor!)
         }
         else {
-            let cursorPosition = textField.positionFromPosition(textField.endOfDocument, offset: formatter.cursorOffsetFromEndOfString)
+            let cursorPosition = textField.positionFromPosition(textField.endOfDocument, offset: formatter.cursorOffsetFromEndOfString)!
             textField.selectedTextRange = textField.textRangeFromPosition(cursorPosition, toPosition: cursorPosition)
         }
         

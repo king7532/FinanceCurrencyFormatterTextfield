@@ -18,7 +18,7 @@ public class FinanceCurrencyFormatter : NSNumberFormatter {
         setupFormatter()
     }
     
-    required public init(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setupFormatter()
     }
@@ -32,7 +32,7 @@ public class FinanceCurrencyFormatter : NSNumberFormatter {
         // Some locales put the currency symbol at the end of the string like "1 234.56 €"
         let digits = NSCharacterSet.decimalDigitCharacterSet()
         let s = self.stringFromNumber(NSDecimalNumber.zero())!
-        println(s)
+        print(s)
         let unicodes = s.unicodeScalars
         var ui = unicodes.endIndex
         
@@ -40,12 +40,12 @@ public class FinanceCurrencyFormatter : NSNumberFormatter {
             ui = ui.predecessor()
         }
         let si = ui.samePositionIn(s)!
-        self.cursorOffsetFromEndOfString = -1*(distance(si, s.endIndex)-1)
-        println("cursorOffsetFromEnd = \(self.cursorOffsetFromEndOfString)")
+        self.cursorOffsetFromEndOfString = -1*(si.distanceTo(s.endIndex)-1)
+        print("cursorOffsetFromEnd = \(self.cursorOffsetFromEndOfString)")
     }
     
     func stringDecimalDigits(s: String) -> String {
-        return join("", s.componentsSeparatedByCharactersInSet(NSCharacterSet.decimalDigitCharacterSet().invertedSet))
+        return s.componentsSeparatedByCharactersInSet(NSCharacterSet.decimalDigitCharacterSet().invertedSet).joinWithSeparator("")
     }
     
     override public func isPartialStringValid(partialString: String, newEditingString newString: AutoreleasingUnsafeMutablePointer<NSString?>, errorDescription error: AutoreleasingUnsafeMutablePointer<NSString?>) -> Bool {

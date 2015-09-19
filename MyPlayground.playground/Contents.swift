@@ -37,16 +37,16 @@ let only_consonants = String(filtered)
 // only_consonants is "hll,  mst b gng"
 */
 let str2 = "$1,23.45"
-let components = str2.componentsSeparatedByCharactersInSet(NSCharacterSet.decimalDigitCharacterSet().invertedSet).filter({!isEmpty($0)})
-join("", components)
+let components = str2.componentsSeparatedByCharactersInSet(NSCharacterSet.decimalDigitCharacterSet().invertedSet).filter({!$0.characters.isEmpty})
+components.joinWithSeparator("")
 
 //let v = String(filter(str2) { $0 != "." })
 
-let w = String(filter(str2, { !contains(formatter.decimalSeparator!, $0) }))
+let w = String(str2.characters.filter({ !(formatter.decimalSeparator!).characters.contains($0) }))
 
 //let str3 = "1 234.56 €"
 let str3 = "$1,234.56"
-count(str3)
+str3.characters.count
 
 let digits = NSCharacterSet.decimalDigitCharacterSet()
 //let isADigit = digits.longCharacterIsMember(uni.value)
@@ -59,8 +59,4 @@ while !digits.longCharacterIsMember(unicodes[ui].value) {
 }
 ui
 let stri = ui.samePositionIn(str3)!
-str3[stri]
-
-let cursor = distance(stri, str3.endIndex)
-
-
+str
