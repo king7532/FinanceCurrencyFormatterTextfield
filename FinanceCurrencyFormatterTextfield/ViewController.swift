@@ -13,7 +13,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var userTextLabel: UILabel!
     @IBOutlet weak var textField: UITextField!
     
-    var formatter = FinanceCurrencyFormatter()
+    //var formatter = FinanceCurrencyFormatter()
+    var formatter = OBJCFinanceCurrencyFormatter();
+    
     var userEntered :String?
     
     override func viewDidLoad() {

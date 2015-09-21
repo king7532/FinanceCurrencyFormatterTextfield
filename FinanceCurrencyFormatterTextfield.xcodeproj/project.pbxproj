@@ -14,6 +14,7 @@
 		3C8204AF1B962C95002A5F7F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C8204AD1B962C95002A5F7F /* LaunchScreen.xib */; };
 		3C8204BB1B962C95002A5F7F /* FinanceCurrencyFormatterTextfieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8204BA1B962C95002A5F7F /* FinanceCurrencyFormatterTextfieldTests.swift */; };
 		3C8204C51B962CBC002A5F7F /* FinanceCurrencyFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8204C41B962CBC002A5F7F /* FinanceCurrencyFormatter.swift */; };
+		3C99B11C1BB0A6E200E88348 /* OBJCFinanceCurrencyFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C99B11B1BB0A6E200E88348 /* OBJCFinanceCurrencyFormatter.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,9 @@
 		3C8204BA1B962C95002A5F7F /* FinanceCurrencyFormatterTextfieldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceCurrencyFormatterTextfieldTests.swift; sourceTree = "<group>"; };
 		3C8204C41B962CBC002A5F7F /* FinanceCurrencyFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinanceCurrencyFormatter.swift; sourceTree = "<group>"; };
 		3C8204C61B965BA3002A5F7F /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
+		3C99B1191BB0A6E200E88348 /* FinanceCurrencyFormatterTextfield-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FinanceCurrencyFormatterTextfield-Bridging-Header.h"; sourceTree = "<group>"; };
+		3C99B11A1BB0A6E200E88348 /* OBJCFinanceCurrencyFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OBJCFinanceCurrencyFormatter.h; sourceTree = "<group>"; };
+		3C99B11B1BB0A6E200E88348 /* OBJCFinanceCurrencyFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OBJCFinanceCurrencyFormatter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +94,9 @@
 				3C8204AB1B962C95002A5F7F /* Images.xcassets */,
 				3C8204AD1B962C95002A5F7F /* LaunchScreen.xib */,
 				3C8204A21B962C95002A5F7F /* Supporting Files */,
+				3C99B11A1BB0A6E200E88348 /* OBJCFinanceCurrencyFormatter.h */,
+				3C99B11B1BB0A6E200E88348 /* OBJCFinanceCurrencyFormatter.m */,
+				3C99B1191BB0A6E200E88348 /* FinanceCurrencyFormatterTextfield-Bridging-Header.h */,
 			);
 			path = FinanceCurrencyFormatterTextfield;
 			sourceTree = "<group>";
@@ -223,6 +230,7 @@
 			files = (
 				3C8204C51B962CBC002A5F7F /* FinanceCurrencyFormatter.swift in Sources */,
 				3C8204A71B962C95002A5F7F /* ViewController.swift in Sources */,
+				3C99B11C1BB0A6E200E88348 /* OBJCFinanceCurrencyFormatter.m in Sources */,
 				3C8204A51B962C95002A5F7F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -352,10 +360,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = FinanceCurrencyFormatterTextfield/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FinanceCurrencyFormatterTextfield/FinanceCurrencyFormatterTextfield-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -363,10 +374,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = FinanceCurrencyFormatterTextfield/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FinanceCurrencyFormatterTextfield/FinanceCurrencyFormatterTextfield-Bridging-Header.h";
 			};
 			name = Release;
 		};
