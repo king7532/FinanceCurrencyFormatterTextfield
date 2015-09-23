@@ -2,61 +2,42 @@
 
 import UIKit
 
+//var formatter = FinanceCurrencyFormatter()
 
+var cursorOffsetFromEndOfString = 0
+var currencyScale = 0
 
-var d = NSDecimalNumber(string: "abc")
-var g = NSDecimalNumber(string: "-1.23")
+var formatter :NSNumberFormatter = {
+    let nf = NSNumberFormatter()
+    nf.numberStyle = .CurrencyStyle
+    nf.generatesDecimalNumbers = true
+    currencyScale = -1 * nf.maximumFractionDigits
+    return nf
+}()
 
-g == NSDecimalNumber.notANumber()
-
-
-var formatter = NSNumberFormatter()
-formatter.numberStyle = .CurrencyStyle
-formatter.generatesDecimalNumbers = true
-
-formatter.numberFromString("$1,923.45")?.stringValue
-
-let scanner = NSScanner(string: "123.45")
-//if !scanner.scanInt(nil) || !scanner.atEnd {
-//    println(
-//}
-
-var decFormatter = NSNumberFormatter()
-decFormatter.numberStyle = .DecimalStyle
-decFormatter.minimumFractionDigits = 0
-decFormatter.maximumFractionDigits = 0
-decFormatter.numberFromString("123.45")
-/*
-let vowels = "eaoiu"
-let isConsonant = { !contains(vowels, $0) }
-let s = "hello, i must be going"
-// filtered will be an array
-let filtered = filter(s, isConsonant)
-// and then we have to turn it back into a string
-let only_consonants = String(filtered)
-// only_consonants is "hll,  mst b gng"
-*/
-let str2 = "$1,23.45"
-let components = str2.componentsSeparatedByCharactersInSet(NSCharacterSet.decimalDigitCharacterSet().invertedSet).filter({!$0.characters.isEmpty})
-components.joinWithSeparator("")
-
-//let v = String(filter(str2) { $0 != "." })
-
-let w = String(str2.characters.filter({ !(formatter.decimalSeparator!).characters.contains($0) }))
-
-//let str3 = "1 234.56 €"
-let str3 = "$1,234.56"
-str3.characters.count
-
-let digits = NSCharacterSet.decimalDigitCharacterSet()
-//let isADigit = digits.longCharacterIsMember(uni.value)
-
-let unicodes = str3.unicodeScalars
-var ui = unicodes.endIndex
-
-while !digits.longCharacterIsMember(unicodes[ui].value) {
-    ui = ui.predecessor()
+func stringDecimalDigits(s: String) -> String {
+    return s.componentsSeparatedByCharactersInSet(NSCharacterSet.decimalDigitCharacterSet().invertedSet).joinWithSeparator("")
 }
-ui
-let stri = ui.samePositionIn(str3)!
-str
+
+var str = "Hello, playground"
+let a = "123"
+let b = "123.4"
+let c = "123.45"
+let d = "$1234.56"
+let e = "$ 1,234.00"
+let f = "198 234,89 €"
+let g = "9.876,54 €"
+let h = "123abc"
+let i = "123abc789"
+let j = "546.00"
+let k = "0.00"
+
+let arr = [a,b,c,d,e,f,g,h,i,j,k]
+
+arr.map { NSDecimalNumber(string: $0) }
+arr.map { stringDecimalDigits($0) }
+
+let test = NSDecimalNumber(string: "0")
+
+formatter.stringFromNumber(0)
+

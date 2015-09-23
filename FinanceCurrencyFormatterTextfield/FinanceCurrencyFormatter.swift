@@ -9,6 +9,12 @@
 import Foundation
 
 public class FinanceCurrencyFormatter : NSNumberFormatter {
+
+    static let NumberFormatter: NSNumberFormatter = {
+        let nf = NSNumberFormatter()
+        nf.generatesDecimalNumbers = true
+        return nf
+    }()
     
     private(set) var currencyScale :Int!
     private(set) var cursorOffsetFromEndOfString :Int = 0
@@ -17,22 +23,22 @@ public class FinanceCurrencyFormatter : NSNumberFormatter {
         super.init()
         setupFormatter()
     }
-    
+
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setupFormatter()
     }
-    
+
     func setupFormatter() {
         numberStyle = .CurrencyStyle
         generatesDecimalNumbers = true
-        self.currencyScale = -1 * maximumFractionDigits
+        currencyScale = -1 * maximumFractionDigits
         
         // Determine the textfield cursor offeset from the end of the string
         // Some locales put the currency symbol at the end of the string like "1 234.56 €"
         let digits = NSCharacterSet.decimalDigitCharacterSet()
-        let s = self.stringFromNumber(NSDecimalNumber.zero())!
-        print(s)
+        let s = stringFromNumber(NSDecimalNumber.zero())!
+
         let unicodes = s.unicodeScalars
         var ui = unicodes.endIndex
         
@@ -40,8 +46,7 @@ public class FinanceCurrencyFormatter : NSNumberFormatter {
             ui = ui.predecessor()
         }
         let si = ui.samePositionIn(s)!
-        self.cursorOffsetFromEndOfString = -1*(si.distanceTo(s.endIndex)-1)
-        print("cursorOffsetFromEnd = \(self.cursorOffsetFromEndOfString)")
+        cursorOffsetFromEndOfString = -1*(si.distanceTo(s.endIndex)-1)
     }
     
     func stringDecimalDigits(s: String) -> String {
@@ -60,5 +65,26 @@ public class FinanceCurrencyFormatter : NSNumberFormatter {
             return false
         }
         return true
+    }
+    
+    func stringFromString(string: String?) -> String? {
+        guard let s = string else {
+            return nil
+        }
+
+        let digits = self.stringDecimalDigits(s)
+        if digits.isEmpty { return nil }
+        
+        var number = NSDecimalNumber(string: digits)
+        if number == NSDecimalNumber.notANumber() {
+            if let n = FinanceCurrencyFormatter.NumberFormatter.numberFromString(digits) as? NSDecimalNumber {
+                number = n
+            }
+            else {
+                number = NSDecimalNumber.zero()
+            }
+        }
+        number = number.decimalNumberByMultiplyingByPowerOf10(Int16(currencyScale))
+        return stringFromNumber(number)
     }
 }

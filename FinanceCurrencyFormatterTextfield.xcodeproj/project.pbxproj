@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C4B76791BB30ADC00D93A0A /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4B76781BB30ADC00D93A0A /* ViewController2.swift */; settings = {ASSET_TAGS = (); }; };
+		3C6402F31BB31B4B00051EBC /* FinanceCurrencyFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C6402F21BB31B4B00051EBC /* FinanceCurrencyFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3C6402F81BB31B5700051EBC /* FinanceCurrencyFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8204C41B962CBC002A5F7F /* FinanceCurrencyFormatter.swift */; settings = {ASSET_TAGS = (); }; };
 		3C8204A51B962C95002A5F7F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8204A41B962C95002A5F7F /* AppDelegate.swift */; };
 		3C8204A71B962C95002A5F7F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8204A61B962C95002A5F7F /* ViewController.swift */; };
 		3C8204AA1B962C95002A5F7F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C8204A81B962C95002A5F7F /* Main.storyboard */; };
@@ -28,7 +31,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3C4B76781BB30ADC00D93A0A /* ViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
 		3C597BBC1B988B3200767ED4 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		3C6402F01BB31B4B00051EBC /* FinanceCurrencyFormatter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FinanceCurrencyFormatter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C6402F21BB31B4B00051EBC /* FinanceCurrencyFormatter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinanceCurrencyFormatter.h; sourceTree = "<group>"; };
+		3C6402F41BB31B4B00051EBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3C77B0431BB31D68003DE489 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
 		3C82049F1B962C95002A5F7F /* FinanceCurrencyFormatterTextfield.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinanceCurrencyFormatterTextfield.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C8204A31B962C95002A5F7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C8204A41B962C95002A5F7F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -40,13 +48,19 @@
 		3C8204B91B962C95002A5F7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C8204BA1B962C95002A5F7F /* FinanceCurrencyFormatterTextfieldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceCurrencyFormatterTextfieldTests.swift; sourceTree = "<group>"; };
 		3C8204C41B962CBC002A5F7F /* FinanceCurrencyFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinanceCurrencyFormatter.swift; sourceTree = "<group>"; };
-		3C8204C61B965BA3002A5F7F /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
 		3C99B1191BB0A6E200E88348 /* FinanceCurrencyFormatterTextfield-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FinanceCurrencyFormatterTextfield-Bridging-Header.h"; sourceTree = "<group>"; };
 		3C99B11A1BB0A6E200E88348 /* OBJCFinanceCurrencyFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OBJCFinanceCurrencyFormatter.h; sourceTree = "<group>"; };
 		3C99B11B1BB0A6E200E88348 /* OBJCFinanceCurrencyFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OBJCFinanceCurrencyFormatter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		3C6402EC1BB31B4B00051EBC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3C82049C1B962C95002A5F7F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -64,13 +78,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3C6402F11BB31B4B00051EBC /* FinanceCurrencyFormatter */ = {
+			isa = PBXGroup;
+			children = (
+				3C6402F21BB31B4B00051EBC /* FinanceCurrencyFormatter.h */,
+				3C6402F41BB31B4B00051EBC /* Info.plist */,
+			);
+			path = FinanceCurrencyFormatter;
+			sourceTree = "<group>";
+		};
 		3C8204961B962C95002A5F7F = {
 			isa = PBXGroup;
 			children = (
+				3C77B0431BB31D68003DE489 /* MyPlayground.playground */,
 				3C597BBC1B988B3200767ED4 /* README.md */,
-				3C8204C61B965BA3002A5F7F /* MyPlayground.playground */,
 				3C8204A11B962C95002A5F7F /* FinanceCurrencyFormatterTextfield */,
 				3C8204B71B962C95002A5F7F /* FinanceCurrencyFormatterTextfieldTests */,
+				3C6402F11BB31B4B00051EBC /* FinanceCurrencyFormatter */,
 				3C8204A01B962C95002A5F7F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -80,6 +104,7 @@
 			children = (
 				3C82049F1B962C95002A5F7F /* FinanceCurrencyFormatterTextfield.app */,
 				3C8204B41B962C95002A5F7F /* FinanceCurrencyFormatterTextfieldTests.xctest */,
+				3C6402F01BB31B4B00051EBC /* FinanceCurrencyFormatter.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -89,6 +114,7 @@
 			children = (
 				3C8204C41B962CBC002A5F7F /* FinanceCurrencyFormatter.swift */,
 				3C8204A41B962C95002A5F7F /* AppDelegate.swift */,
+				3C4B76781BB30ADC00D93A0A /* ViewController2.swift */,
 				3C8204A61B962C95002A5F7F /* ViewController.swift */,
 				3C8204A81B962C95002A5F7F /* Main.storyboard */,
 				3C8204AB1B962C95002A5F7F /* Images.xcassets */,
@@ -128,7 +154,36 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		3C6402ED1BB31B4B00051EBC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C6402F31BB31B4B00051EBC /* FinanceCurrencyFormatter.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
+		3C6402EF1BB31B4B00051EBC /* FinanceCurrencyFormatter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3C6402F71BB31B4B00051EBC /* Build configuration list for PBXNativeTarget "FinanceCurrencyFormatter" */;
+			buildPhases = (
+				3C6402EB1BB31B4B00051EBC /* Sources */,
+				3C6402EC1BB31B4B00051EBC /* Frameworks */,
+				3C6402ED1BB31B4B00051EBC /* Headers */,
+				3C6402EE1BB31B4B00051EBC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FinanceCurrencyFormatter;
+			productName = FinanceCurrencyFormatter;
+			productReference = 3C6402F01BB31B4B00051EBC /* FinanceCurrencyFormatter.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		3C82049E1B962C95002A5F7F /* FinanceCurrencyFormatterTextfield */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3C8204BE1B962C95002A5F7F /* Build configuration list for PBXNativeTarget "FinanceCurrencyFormatterTextfield" */;
@@ -172,9 +227,12 @@
 			attributes = {
 				LastSwiftMigration = 0700;
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0640;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Benjamin King";
 				TargetAttributes = {
+					3C6402EF1BB31B4B00051EBC = {
+						CreatedOnToolsVersion = 7.0;
+					};
 					3C82049E1B962C95002A5F7F = {
 						CreatedOnToolsVersion = 6.4;
 					};
@@ -199,11 +257,19 @@
 			targets = (
 				3C82049E1B962C95002A5F7F /* FinanceCurrencyFormatterTextfield */,
 				3C8204B31B962C95002A5F7F /* FinanceCurrencyFormatterTextfieldTests */,
+				3C6402EF1BB31B4B00051EBC /* FinanceCurrencyFormatter */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		3C6402EE1BB31B4B00051EBC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3C82049D1B962C95002A5F7F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -224,10 +290,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		3C6402EB1BB31B4B00051EBC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C6402F81BB31B5700051EBC /* FinanceCurrencyFormatter.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3C82049B1B962C95002A5F7F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C4B76791BB30ADC00D93A0A /* ViewController2.swift in Sources */,
 				3C8204C51B962CBC002A5F7F /* FinanceCurrencyFormatter.swift in Sources */,
 				3C8204A71B962C95002A5F7F /* ViewController.swift in Sources */,
 				3C99B11C1BB0A6E200E88348 /* OBJCFinanceCurrencyFormatter.m in Sources */,
@@ -273,6 +348,48 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		3C6402F51BB31B4B00051EBC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_TESTABILITY = YES;
+				INFOPLIST_FILE = FinanceCurrencyFormatter/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.king7532.FinanceCurrencyFormatter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		3C6402F61BB31B4B00051EBC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = FinanceCurrencyFormatter/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.king7532.FinanceCurrencyFormatter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		3C8204BC1B962C95002A5F7F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -294,6 +411,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -364,6 +482,7 @@
 				INFOPLIST_FILE = FinanceCurrencyFormatterTextfield/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.king7532.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "FinanceCurrencyFormatterTextfield/FinanceCurrencyFormatterTextfield-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -378,6 +497,7 @@
 				INFOPLIST_FILE = FinanceCurrencyFormatterTextfield/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.king7532.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "FinanceCurrencyFormatterTextfield/FinanceCurrencyFormatterTextfield-Bridging-Header.h";
 			};
@@ -397,6 +517,7 @@
 				);
 				INFOPLIST_FILE = FinanceCurrencyFormatterTextfieldTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.king7532.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FinanceCurrencyFormatterTextfield.app/FinanceCurrencyFormatterTextfield";
 			};
@@ -412,6 +533,7 @@
 				);
 				INFOPLIST_FILE = FinanceCurrencyFormatterTextfieldTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.king7532.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FinanceCurrencyFormatterTextfield.app/FinanceCurrencyFormatterTextfield";
 			};
@@ -420,6 +542,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		3C6402F71BB31B4B00051EBC /* Build configuration list for PBXNativeTarget "FinanceCurrencyFormatter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3C6402F51BB31B4B00051EBC /* Debug */,
+				3C6402F61BB31B4B00051EBC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		3C82049A1B962C95002A5F7F /* Build configuration list for PBXProject "FinanceCurrencyFormatterTextfield" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

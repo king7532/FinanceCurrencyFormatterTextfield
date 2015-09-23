@@ -13,6 +13,7 @@
 @property (nonatomic) NSInteger currencyScale;
 @property (nonatomic) NSInteger cursorOffsetFromEndOfString;
 
+-(NSString *)stringFromString:(NSString *)string;
 -(NSString * _Nonnull)stringDecimalDigits:(NSString * _Nonnull)s;
 -(BOOL)isPartialStringValid:(NSString *)partialString newEditingString:(NSString * _Nullable __autoreleasing *)newString errorDescription:(NSString * _Nullable __autoreleasing *)error;
 

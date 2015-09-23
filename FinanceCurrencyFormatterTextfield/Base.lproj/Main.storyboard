@@ -6,10 +6,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--View Controller2-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FinanceCurrencyFormatterTextfield" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController2" customModule="FinanceCurrencyFormatterTextfield" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -26,20 +26,27 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                 <connections>
+                                    <action selector="textFieldUpdate:" destination="BYZ-38-t0r" eventType="editingChanged" id="tfG-Cu-wBI"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="TX3-wD-XVp"/>
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jzl-l7-cT6">
-                                <rect key="frame" x="261" y="115" width="79" height="30"/>
+                                <rect key="frame" x="262" y="115" width="78" height="30"/>
                                 <state key="normal" title="End Editing">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="endEditingAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1PM-Tw-ugx"/>
+                                    <action selector="endEditing:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p2m-ot-8Cw"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="User Entered Digits" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xgU-b4-spO">
-                                <rect key="frame" x="16" y="196" width="568" height="36"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Entered Digits" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xgU-b4-spO">
+                                <rect key="frame" x="20" y="196" width="560" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Formatted" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="an7-9q-XaE">
+                                <rect key="frame" x="21" y="246" width="560" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -54,12 +61,16 @@
                             <constraint firstAttribute="centerX" secondItem="xgU-b4-spO" secondAttribute="centerX" id="45P-xZ-kc7"/>
                             <constraint firstAttribute="trailingMargin" secondItem="xgU-b4-spO" secondAttribute="trailing" id="D9v-HZ-wFl"/>
                             <constraint firstItem="JAu-w2-oPI" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="P4k-4N-jZL"/>
+                            <constraint firstItem="an7-9q-XaE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="1" id="eil-7e-5iu"/>
+                            <constraint firstItem="an7-9q-XaE" firstAttribute="top" secondItem="xgU-b4-spO" secondAttribute="bottom" constant="14" id="fbi-d0-Bz9"/>
                             <constraint firstAttribute="centerX" secondItem="jzl-l7-cT6" secondAttribute="centerX" id="jEd-fL-h10"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="an7-9q-XaE" secondAttribute="trailing" constant="-1" id="u7U-cg-SEl"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="textField" destination="JAu-w2-oPI" id="dhU-06-zXX"/>
-                        <outlet property="userTextLabel" destination="xgU-b4-spO" id="CBp-4l-FZJ"/>
+                        <outlet property="formattedText" destination="an7-9q-XaE" id="7N7-e3-7WL"/>
+                        <outlet property="textField" destination="JAu-w2-oPI" id="WmG-XM-rjs"/>
+                        <outlet property="userEnteredText" destination="xgU-b4-spO" id="OcE-7Y-7nd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
