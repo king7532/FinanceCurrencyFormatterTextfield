@@ -74,7 +74,7 @@ public class FinanceCurrencyFormatter : NSNumberFormatter {
 
         let digits = self.stringDecimalDigits(s)
         if digits.isEmpty { return nil }
-        
+
         var number = NSDecimalNumber(string: digits)
         if number == NSDecimalNumber.notANumber() {
             if let n = FinanceCurrencyFormatter.NumberFormatter.numberFromString(digits) as? NSDecimalNumber {

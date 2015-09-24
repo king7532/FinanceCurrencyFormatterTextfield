@@ -37,11 +37,11 @@ class ViewController2: UIViewController {
         self.formattedText.text = thisformattedText
         
         let (left, right) = countDigitsFromCursor(textField)
-        print("left: \(left)\tright: \(right)\t\ttext: \(text)")
+        print("left: \(left)\tright: \(right)\t\ttext: \(text) => \(thisformattedText)")
         
         textField.text = thisformattedText
         
-        //setCursor(textField, withDigitsFromRight: right)
+        setCursor(textField, withDigitsFromRight: right, minOffsetFromEnd: -1*formatter.cursorOffsetFromEndOfString)
     }
     
     @IBAction func endEditing(sender: AnyObject) {
@@ -74,7 +74,8 @@ class ViewController2: UIViewController {
         var rightindex = 0
         var leftindex = 0
         
-        for ch in textField.text!.unicodeScalars {
+        let unicodes = textField.text!.unicodeScalars
+        for ch in unicodes {
             if rightDigits == -1 && cursorPos == textField.positionFromPosition(textField.beginningOfDocument, offset: rightindex) {
                 rightDigits = 0
             }
@@ -84,7 +85,7 @@ class ViewController2: UIViewController {
             rightindex++;
         }
         
-        for ch in textField.text!.unicodeScalars.reverse() {
+        for ch in unicodes.reverse() {
             if leftDigits == -1 && cursorPos == textField.positionFromPosition(textField.endOfDocument, offset: -1*leftindex) {
                 leftDigits = 0
             }
@@ -117,14 +118,26 @@ class ViewController2: UIViewController {
         }
     }
     
-    func setCursor(textField: UITextField, withDigitsFromRight digits: Int) {
-        //let length = textField.text!.characters.count
+    func setCursor(textField: UITextField, withDigitsFromRight digits: Int, minOffsetFromEnd: Int = 0) {
         var index = 0
         var digitsSkipped = 0
-        
-        for ch in textField.text!.unicodeScalars.reverse() {
-            if digitsSkipped == digits {
+
+        guard digits > 0 else {
+            let pos = textField.positionFromPosition(textField.endOfDocument, offset: -1*minOffsetFromEnd)!
+            textField.selectedTextRange = textField.textRangeFromPosition(pos, toPosition: pos)
+            return
+        }
+        let length = textField.text!.characters.count
+        let unicodes = textField.text!.unicodeScalars.reverse()
+        print("setCursor: \(unicodes)")
+        for ch in unicodes {
+            print("\tch: \(ch)\tindex: \(index)")
+            if digitsSkipped == digits && (charSet.longCharacterIsMember(ch.value) || index == length-1) {
+                if index < minOffsetFromEnd {
+                    index = minOffsetFromEnd
+                }
                 let pos = textField.positionFromPosition(textField.endOfDocument, inDirection: .Left, offset: index)!
+                print("\toffset from end: \(index)")
                 textField.selectedTextRange = textField.textRangeFromPosition(pos, toPosition: pos)
                 return
             }
@@ -139,6 +152,9 @@ class ViewController2: UIViewController {
 extension ViewController2: UITextFieldDelegate {
     func textFieldDidBeginEditing(textField: UITextField) {
         textField.text = formatter.stringFromNumber(0)
+        let cursor = textField.positionFromPosition(textField.endOfDocument, offset: formatter.cursorOffsetFromEndOfString)!
+        textField.selectedTextRange = textField.textRangeFromPosition(cursor, toPosition: cursor)
+        print("textField.selectedTextRange = \(textField.selectedTextRange)")
     }
     
     /*

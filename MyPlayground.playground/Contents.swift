@@ -41,3 +41,15 @@ let test = NSDecimalNumber(string: "0")
 
 formatter.stringFromNumber(0)
 
+var rightDigits = -1
+var rightindex = 0
+
+for in f.unicodeScalars {
+    if rightDigits == -1 && f.value == 0x0a {
+        rightDigits = 0
+    }
+    if rightDigits >= 0 && charSet.longCharacterIsMember(ch.value) {
+        rightDigits++
+    }
+    rightindex++;
+}
