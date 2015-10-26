@@ -31,8 +31,8 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="TX3-wD-XVp"/>
                                 </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jzl-l7-cT6">
-                                <rect key="frame" x="262" y="115" width="78" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jzl-l7-cT6">
+                                <rect key="frame" x="261" y="115" width="78" height="30"/>
                                 <animations/>
                                 <state key="normal" title="End Editing">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -55,16 +55,26 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2g7-MW-Yzd" customClass="FinanceCurrencyTextField" customModule="FinanceCurrencyFormatterTextfield" customModuleProvider="target">
+                                <rect key="frame" x="70" y="316" width="460" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="2g7-MW-Yzd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1Ip-Th-dnY"/>
                             <constraint firstAttribute="centerX" secondItem="JAu-w2-oPI" secondAttribute="centerX" id="2WQ-dj-XZH"/>
                             <constraint firstItem="xgU-b4-spO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="32W-lR-Krz"/>
                             <constraint firstItem="xgU-b4-spO" firstAttribute="top" secondItem="jzl-l7-cT6" secondAttribute="bottom" constant="51" id="3PR-jo-wHI"/>
                             <constraint firstItem="jzl-l7-cT6" firstAttribute="top" secondItem="JAu-w2-oPI" secondAttribute="bottom" constant="15" id="3bw-VH-vTe"/>
                             <constraint firstAttribute="centerX" secondItem="xgU-b4-spO" secondAttribute="centerX" id="45P-xZ-kc7"/>
+                            <constraint firstItem="2g7-MW-Yzd" firstAttribute="top" secondItem="JAu-w2-oPI" secondAttribute="bottom" constant="216" id="4ru-wP-uv1"/>
+                            <constraint firstItem="2g7-MW-Yzd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="50" id="8w3-5p-dlz"/>
                             <constraint firstAttribute="trailingMargin" secondItem="xgU-b4-spO" secondAttribute="trailing" id="D9v-HZ-wFl"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2g7-MW-Yzd" secondAttribute="trailing" constant="50" id="Nhv-aq-7I5"/>
                             <constraint firstItem="JAu-w2-oPI" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="P4k-4N-jZL"/>
                             <constraint firstItem="an7-9q-XaE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="1" id="eil-7e-5iu"/>
                             <constraint firstItem="an7-9q-XaE" firstAttribute="top" secondItem="xgU-b4-spO" secondAttribute="bottom" constant="14" id="fbi-d0-Bz9"/>

@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3C4B76791BB30ADC00D93A0A /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4B76781BB30ADC00D93A0A /* ViewController2.swift */; settings = {ASSET_TAGS = (); }; };
+		3C3200081BDE8F8B00F8B3C5 /* FinanceCurrencyTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3200071BDE8F8B00F8B3C5 /* FinanceCurrencyTextField.swift */; };
+		3C4B76791BB30ADC00D93A0A /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4B76781BB30ADC00D93A0A /* ViewController2.swift */; };
 		3C6402F31BB31B4B00051EBC /* FinanceCurrencyFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C6402F21BB31B4B00051EBC /* FinanceCurrencyFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3C6402F81BB31B5700051EBC /* FinanceCurrencyFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8204C41B962CBC002A5F7F /* FinanceCurrencyFormatter.swift */; settings = {ASSET_TAGS = (); }; };
+		3C6402F81BB31B5700051EBC /* FinanceCurrencyFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8204C41B962CBC002A5F7F /* FinanceCurrencyFormatter.swift */; };
 		3C8204A51B962C95002A5F7F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8204A41B962C95002A5F7F /* AppDelegate.swift */; };
 		3C8204A71B962C95002A5F7F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8204A61B962C95002A5F7F /* ViewController.swift */; };
 		3C8204AA1B962C95002A5F7F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C8204A81B962C95002A5F7F /* Main.storyboard */; };
@@ -17,7 +18,7 @@
 		3C8204AF1B962C95002A5F7F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C8204AD1B962C95002A5F7F /* LaunchScreen.xib */; };
 		3C8204BB1B962C95002A5F7F /* FinanceCurrencyFormatterTextfieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8204BA1B962C95002A5F7F /* FinanceCurrencyFormatterTextfieldTests.swift */; };
 		3C8204C51B962CBC002A5F7F /* FinanceCurrencyFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8204C41B962CBC002A5F7F /* FinanceCurrencyFormatter.swift */; };
-		3C99B11C1BB0A6E200E88348 /* OBJCFinanceCurrencyFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C99B11B1BB0A6E200E88348 /* OBJCFinanceCurrencyFormatter.m */; settings = {ASSET_TAGS = (); }; };
+		3C99B11C1BB0A6E200E88348 /* OBJCFinanceCurrencyFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C99B11B1BB0A6E200E88348 /* OBJCFinanceCurrencyFormatter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +32,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3C3200071BDE8F8B00F8B3C5 /* FinanceCurrencyTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinanceCurrencyTextField.swift; sourceTree = "<group>"; };
 		3C4B76781BB30ADC00D93A0A /* ViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
 		3C597BBC1B988B3200767ED4 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		3C6402F01BB31B4B00051EBC /* FinanceCurrencyFormatter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FinanceCurrencyFormatter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -113,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				3C8204C41B962CBC002A5F7F /* FinanceCurrencyFormatter.swift */,
+				3C3200071BDE8F8B00F8B3C5 /* FinanceCurrencyTextField.swift */,
 				3C8204A41B962C95002A5F7F /* AppDelegate.swift */,
 				3C4B76781BB30ADC00D93A0A /* ViewController2.swift */,
 				3C8204A61B962C95002A5F7F /* ViewController.swift */,
@@ -305,6 +308,7 @@
 				3C4B76791BB30ADC00D93A0A /* ViewController2.swift in Sources */,
 				3C8204C51B962CBC002A5F7F /* FinanceCurrencyFormatter.swift in Sources */,
 				3C8204A71B962C95002A5F7F /* ViewController.swift in Sources */,
+				3C3200081BDE8F8B00F8B3C5 /* FinanceCurrencyTextField.swift in Sources */,
 				3C99B11C1BB0A6E200E88348 /* OBJCFinanceCurrencyFormatter.m in Sources */,
 				3C8204A51B962C95002A5F7F /* AppDelegate.swift in Sources */,
 			);
