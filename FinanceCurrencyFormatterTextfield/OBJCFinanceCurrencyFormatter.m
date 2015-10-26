@@ -43,11 +43,11 @@ static NSNumberFormatter *NumberFormatter = nil;
     unichar buffer[len];
     [s getCharacters:buffer range:NSMakeRange(0, len)];
     long i = len-1;
-
-    while(![digits characterIsMember:buffer[i]]) {
+    
+    while(![digits characterIsMember:buffer[i]] && (i > 0)) {
         i -= 1;
     }
-    self.cursorOffsetFromEndOfString = len - 1 - i;
+    self.cursorOffsetFromEndOfString = -1 * (len - 1 - i);
 }
 
 -(NSString *)stringDecimalDigits:(NSString *)s {

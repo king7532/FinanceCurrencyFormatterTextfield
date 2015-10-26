@@ -123,7 +123,7 @@ class ViewController2: UIViewController {
         var digitsSkipped = 0
 
         guard digits > 0 else {
-            let pos = textField.positionFromPosition(textField.endOfDocument, offset: -1*minOffsetFromEnd)!
+            let pos = textField.positionFromPosition(textField.endOfDocument, offset: -1*abs(minOffsetFromEnd))!
             textField.selectedTextRange = textField.textRangeFromPosition(pos, toPosition: pos)
             return
         }
